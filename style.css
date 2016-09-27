@@ -36,6 +36,9 @@ h3 {
 List Styling
 ******************************/
 
+td {
+  width: 50px;
+}
 h2 {
   position: relative;
   left: 15%;
