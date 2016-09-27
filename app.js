@@ -4,10 +4,13 @@
 
 var pikeHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 var firstAndPikeInfo = {
+  locationName: 'First and Pike',
   minCustomer: 23,
   maxCustomer: 65,
   avgSale: 6.3,
+  dailySales: 0,
   randCustPerHour: [],
+  hourlySales: [],
   calcCustPerHour: function randomCustNum(min, max){
     for(var i = 0; i < pikeHours.length; i++){
       min = Math.ceil(this.minCustomer);
@@ -15,8 +18,6 @@ var firstAndPikeInfo = {
       this.randCustPerHour.push(Math.ceil(Math.random() * (max - min)) + min);
     }
   },
-  dailySales: 0,
-  hourlySales: [],
   calcSales: function(){
     for (var i = 0; i < pikeHours.length; i++) {
       this.hourlySales.push(Math.ceil(this.randCustPerHour[i] * this.avgSale));
@@ -24,7 +25,7 @@ var firstAndPikeInfo = {
     }
 
   },
-  render: function(){
+  render: function(){              //creates and renders the li elements for the first and pike ul
     this.calcCustPerHour();
     this.calcSales();
 
@@ -66,7 +67,7 @@ var seatacInfo = {
     }
 
   },
-  render: function(){
+  render: function(){              //creates and renders the li elements for the seatac ul
     this.calcCustPerHour();
     this.calcSales();
 
@@ -108,7 +109,7 @@ var seattleCenterInfo = {
     }
 
   },
-  render: function(){
+  render: function(){              //creates and renders the li elements for the seattle center ul
     this.calcCustPerHour();
     this.calcSales();
 
@@ -150,7 +151,7 @@ var capHillInfo = {
     }
 
   },
-  render: function(){
+  render: function(){              //creates and renders the li elements for the capitol hill ul
     this.calcCustPerHour();
     this.calcSales();
 
@@ -192,7 +193,7 @@ var alkiInfo = {
     }
 
   },
-  render: function(){
+  render: function(){              //creates and renders the li elements for the alki ul
     this.calcCustPerHour();
     this.calcSales();
 

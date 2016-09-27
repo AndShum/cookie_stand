@@ -1,3 +1,34 @@
 * {
-  outline: 2px dotted red;
+  /*outline: 2px dotted red;*/
+}
+
+body {
+
+}
+
+li {
+  font-size:
+}
+
+/******************************
+List Styling
+******************************/
+
+h2 {
+  position: relative;
+  left: 15%;
+  padding: 20px;
+  background-image: url()
+
+}
+.ulWrap {
+  width: 30%;
+  display: inline;
+  float: left;
+  margin: 10px 10px;;
+  outline: solid 1px black;
+}
+
+lie {
+  color: red;
 }
