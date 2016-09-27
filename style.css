@@ -1,3 +1,7 @@
+/******************************
+General Styling
+******************************/
+
 * {
   /*outline: 2px dotted red;*/
 }
@@ -6,9 +10,27 @@ body {
 
 }
 
-li {
-  font-size:
+
+/******************************
+Header Styling
+******************************/
+
+header {
+  padding: 20px;
 }
+
+h1 {
+  width: 20%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+h3 {
+  width: 20%;
+  text-align: center;
+  margin: 0 auto;
+}
+
 
 /******************************
 List Styling
@@ -29,6 +51,6 @@ h2 {
   outline: solid 1px black;
 }
 
-lie {
-  color: red;
+li {
+  font-size:
 }

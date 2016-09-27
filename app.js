@@ -47,9 +47,9 @@ firstAndPikeInfo.render();
 
 var seatacHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 var seatacInfo = {
-  minCustomer: 23,
-  maxCustomer: 65,
-  avgSale: 6.3,
+  minCustomer: 3,
+  maxCustomer: 24,
+  avgSale: 1.2,
   randCustPerHour: [],
   calcCustPerHour: function randomCustNum(min, max){
     for(var i = 0; i < seatacHours.length; i++){
@@ -89,9 +89,9 @@ seatacInfo.render();
 
 var seattleCenterHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 var seattleCenterInfo = {
-  minCustomer: 23,
-  maxCustomer: 65,
-  avgSale: 6.3,
+  minCustomer: 11,
+  maxCustomer: 38,
+  avgSale: 3.7,
   randCustPerHour: [],
   calcCustPerHour: function randomCustNum(min, max){
     for(var i = 0; i < seattleCenterHours.length; i++){
@@ -131,9 +131,9 @@ seattleCenterInfo.render();
 
 var capHillHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 var capHillInfo = {
-  minCustomer: 23,
-  maxCustomer: 65,
-  avgSale: 6.3,
+  minCustomer: 20,
+  maxCustomer: 38,
+  avgSale: 2.3,
   randCustPerHour: [],
   calcCustPerHour: function randomCustNum(min, max){
     for(var i = 0; i < capHillHours.length; i++){
@@ -173,9 +173,9 @@ capHillInfo.render();
 
 var alkiHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 var alkiInfo = {
-  minCustomer: 23,
-  maxCustomer: 65,
-  avgSale: 6.3,
+  minCustomer: 2,
+  maxCustomer: 16,
+  avgSale: 4.6,
   randCustPerHour: [],
   calcCustPerHour: function randomCustNum(min, max){
     for(var i = 0; i < alkiHours.length; i++){
@@ -191,7 +191,6 @@ var alkiInfo = {
       this.hourlySales.push(Math.ceil(this.randCustPerHour[i] * this.avgSale));
       this.dailySales += this.hourlySales[i];
     }
-
   },
   render: function(){              //creates and renders the li elements for the alki ul
     this.calcCustPerHour();
