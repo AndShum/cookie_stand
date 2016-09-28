@@ -1,3 +1,7 @@
+/******************************
+General Styling
+******************************/
+
 * {
   /*outline: 2px dotted red;*/
 }
@@ -6,13 +10,45 @@ body {
 
 }
 
-li {
-  font-size:
-}
 
 /******************************
-List Styling
+Header Styling
 ******************************/
+
+header {
+  padding: 20px;
+}
+
+h1 {
+  width: 20%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+h3 {
+  width: 20%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+
+/******************************
+Table Styling
+******************************/
+
+td {
+  width: 6.25%;
+  outline: 2px solid black;
+
+}
+
+tr {
+  border: red;
+}
+
+th {
+  outline: 2px solid black;
+}
 
 h2 {
   position: relative;
@@ -29,6 +65,6 @@ h2 {
   outline: solid 1px black;
 }
 
-lie {
-  color: red;
+li {
+  font-size:
 }
