@@ -13,6 +13,7 @@ function StoreInfo(locationName, minCustomer, maxCustomer, avgSale){ //construct
   this.dailySales = 0;
   this.randCustPerHour = [];
   this.hourlySales = [];
+  this.hourlyTotals = [];
   this.calcCustPerHour = function randomCustNum(min, max){ //calulates random # of customer for each hour between the min & max numbers provided
     for(var i = 0; i < hours.length; i++){
       min = Math.ceil(this.minCustomer);
@@ -26,6 +27,7 @@ function StoreInfo(locationName, minCustomer, maxCustomer, avgSale){ //construct
       this.dailySales += this.hourlySales[i];
     }
   };
+
 
   this.calcCustPerHour();
   this.calcSales();
@@ -84,6 +86,10 @@ function generateTableData(){
 }
 generateTableData();
 
+
+ //document.createAttribute
+ //att.value = this.name
+
 function createTableFooter(){
   var salesTable = document.getElementById('salesFigures');
   var tableRow = document.createElement('tr');
@@ -98,18 +104,25 @@ function createTableFooter(){
   salesTable.appendChild(tableRow);
 }
 createTableFooter();
- //document.createAttribute
- //att.value = this.name
 
 function handleDataRequest(event){
 
+  var new_store_location = event.target.store_location.value;
+  var new_store_min = event.target.min_customers.value;
+  var new_store_max = event.target.max_customers.value;
+  var new_avg_sales = event.target.avg_sales.value;
+
   event.preventDefault();
+
+  var newStoreInfo = new StoreInfo(new_store_location + ' Location', new_store_min, new_store_max, new_avg_sales); //eslint-disable-line
 
   if (!event.target.store_location.value || !event.target.min_customers.value || !event.target.max_customers.value || !event.target.avg_sales.value ){
     alert('"Input" cannot be left blank, please input a valid request.');
   }
-  
-
+  salesFigures.textContent = null;
+  createTableHeader();
+  generateTableData();
+  createTableFooter();
 
 
 };
