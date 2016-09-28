@@ -33,15 +33,21 @@ h3 {
 
 
 /******************************
-List Styling
+Table Styling
 ******************************/
 
 td {
-  width: 50px;
+  width: 6.25%;
+  outline: 2px solid black;
+
 }
 
 tr {
   border: red;
+}
+
+th {
+  outline: 2px solid black;
 }
 
 h2 {

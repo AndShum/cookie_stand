@@ -83,8 +83,22 @@ function generateTableData(){
     allStores[i].render();
   }
 }
-
 generateTableData();
+
+function createTableFooter(){
+  var salesTable = document.getElementById('salesFigures');
+  var tableRow = document.createElement('tr');
+  var footerTotals = document.createElement('td');
+  footerTotals.textContent = 'Totals';
+  tableRow.appendChild(footerTotals);
+  for ( var i = 0; i < hours.length + 1; i++){
+    var hourlyTotals = document.createElement('td');
+    hourlyTotals.textContent = '';
+    tableRow.appendChild(hourlyTotals);
+  }
+  salesTable.appendChild(tableRow);
+}
+createTableFooter();
 //
 
 //
