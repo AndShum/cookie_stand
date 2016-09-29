@@ -16,45 +16,26 @@ Header Styling
 ******************************/
 
 header {
-  padding: 20px;
-  width: 40%;
-  min-width: 80%;
-  margin: 0 auto 20px;
-}
 
-h1 {
-  width: 20%;
-  text-align: center;
-  margin: 0 auto;
-  padding: 5px;
 }
 
 .pats_cookies_title {
-  margin: 0 auto;
-  width: 605px;
 
 }
-.pat {
+h1.pat {
   font-family: 'Rock Salt', cursive;
   font-size: 60px;
-  color: #ff471a;
+  color: red;
   display: inline;
-  width: 50%;
-  padding: 0 0 0 10%;
 }
 
-.salmon_cookies {
-  text-align: center;
+h1.salmon_cookies {
   font-family: 'Abril Fatface', cursive;
   display: inline;
-  width: 50%;
-  margin: 0 10% 0 10px;
 }
 
 .salmon_image {
-  width: 250px;
-  display: inline;
-  margin: 0 auto;
+  width: 300px;
 }
 
 a, p {
@@ -66,6 +47,7 @@ a, p {
 }
 
 nav {
+  display: inline;
   width: 500px;
   margin: 0 auto;
 }
