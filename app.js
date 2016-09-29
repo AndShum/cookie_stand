@@ -119,11 +119,12 @@ function handleDataRequest(event){
   if (!event.target.store_location.value || !event.target.min_customers.value || !event.target.max_customers.value || !event.target.avg_sales.value ){
     alert('"Input" cannot be left blank, please input a valid request.');
   }
+
   salesFigures.textContent = null;
+
   createTableHeader();
   generateTableData();
   createTableFooter();
-
 
 };
 
