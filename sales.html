@@ -14,7 +14,26 @@
   <h3>Daily Sales</h3>
 </header>
 
+<form id="newLocationForm">
+  <fieldset>
+    <legend>Add New Location</legend>
 
+      <label for="location">Store Location</label>
+      <input name="store_location" type="text" />
+
+      <label for="min_customers">Minimum Cutomers</label>
+      <input name="min_customers" type="text" />
+
+      <label for="max_customers">Maximum Customers</label>
+      <input name="max_customers" type="text"/>
+
+      <label for="avg_sales">Average Cookies Sold Per Hour</label>
+      <input name="avg_sales" type="text"/>
+
+      <button type="submit">Submit</button>
+
+  </fieldset>
+</form>
 <table id="salesFigures"></table>
 <script src="app.js"></script>
 </body>

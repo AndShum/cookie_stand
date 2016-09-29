@@ -32,6 +32,14 @@ h3 {
 }
 
 
+/*****************************
+Form Styling
+******************************/
+
+form {
+  margin: 10px 10px 20px 10px;
+}
+
 /******************************
 Table Styling
 ******************************/
@@ -48,23 +56,4 @@ tr {
 
 th {
   outline: 2px solid black;
-}
-
-h2 {
-  position: relative;
-  left: 15%;
-  padding: 20px;
-  background-image: url()
-
-}
-.ulWrap {
-  width: 30%;
-  display: inline;
-  float: left;
-  margin: 10px 10px;;
-  outline: solid 1px black;
-}
-
-li {
-  font-size:
 }

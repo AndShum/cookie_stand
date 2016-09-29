@@ -2,6 +2,8 @@
 
 
 var hours = ['6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12:00pm', '1:00pm', '2:00pm', '3:00pm', '4:00pm', '5:00pm', '6:00pm', '7:00pm'];
+var newLocationForm = document.getElementById('newLocationForm');
+var salesTable = document.getElementById('salesFigures');
 var allStores = []; //stores the arrays for each of the stores
 function StoreInfo(locationName, minCustomer, maxCustomer, avgSale){ //constructor creating the array's for the stores and rendering the table data
   this.locationName = locationName;
@@ -11,6 +13,7 @@ function StoreInfo(locationName, minCustomer, maxCustomer, avgSale){ //construct
   this.dailySales = 0;
   this.randCustPerHour = [];
   this.hourlySales = [];
+  this.hourlyTotals = [];
   this.calcCustPerHour = function randomCustNum(min, max){ //calulates random # of customer for each hour between the min & max numbers provided
     for(var i = 0; i < hours.length; i++){
       min = Math.ceil(this.minCustomer);
@@ -24,6 +27,7 @@ function StoreInfo(locationName, minCustomer, maxCustomer, avgSale){ //construct
       this.dailySales += this.hourlySales[i];
     }
   };
+
 
   this.calcCustPerHour();
   this.calcSales();
@@ -54,23 +58,23 @@ new StoreInfo('Seattle Center Location', 11, 38, 3.7);
 new StoreInfo('Capitol Hill Location', 20, 38, 2.3);
 new StoreInfo('Alki Location', 2, 16, 4.6);
 
-function createTableHeader(){              //creates and renders the li elements for the first and pike ul
-  var salesTable = document.getElementById('salesFigures');
+function createTableHeader(){              //creates the table header
+  var salesTable = document.getElementById('salesFigures'); //connects this function to the table element in index.html
 
-  var tableRow = document.createElement('tr');
+  var tableRow = document.createElement('tr'); //creates a new table row
 
-  var emptyTd = document.createElement('td');
-  tableRow.appendChild(emptyTd);
-  for (var i = 0; i < hours.length; i++){
-    var tableHeader = document.createElement('th');
-    tableHeader.textContent = hours[i];
-    tableRow.appendChild(tableHeader);
+  var emptyTd = document.createElement('td'); //creates an empty cell at the start of the table header
+  tableRow.appendChild(emptyTd); //appends the empty cell to the table row
+  for (var i = 0; i < hours.length; i++){ //loop creating the cells holding the store hours
+    var tableHeader = document.createElement('th'); //creates new table header element
+    tableHeader.textContent = hours[i]; //fills the table header with whatever hour index the loop has reached
+    tableRow.appendChild(tableHeader); //appends the table header to the table row
   }
-  var locationTotal = document.createElement('td');
-  locationTotal.textContent = 'Daily Location Total';
-  tableRow.appendChild(locationTotal);
+  var locationTotal = document.createElement('td'); //creates a new table cell
+  locationTotal.textContent = 'Daily Location Total'; //fills the table cell with text
+  tableRow.appendChild(locationTotal); //appends the new table cell to the table row
 
-  salesTable.appendChild(tableRow);
+  salesTable.appendChild(tableRow); //appends the new table row to the table element in sales.html
 };
 
 createTableHeader();
@@ -81,6 +85,10 @@ function generateTableData(){
   }
 }
 generateTableData();
+
+
+ //document.createAttribute
+ //att.value = this.name
 
 function createTableFooter(){
   var salesTable = document.getElementById('salesFigures');
@@ -96,5 +104,27 @@ function createTableFooter(){
   salesTable.appendChild(tableRow);
 }
 createTableFooter();
- //document.createAttribute
- //att.value = this.name
+
+function handleDataRequest(event){
+
+  var new_store_location = event.target.store_location.value;
+  var new_store_min = event.target.min_customers.value;
+  var new_store_max = event.target.max_customers.value;
+  var new_avg_sales = event.target.avg_sales.value;
+
+  event.preventDefault();
+
+  var newStoreInfo = new StoreInfo(new_store_location + ' Location', new_store_min, new_store_max, new_avg_sales); //eslint-disable-line
+
+  if (!event.target.store_location.value || !event.target.min_customers.value || !event.target.max_customers.value || !event.target.avg_sales.value ){
+    alert('"Input" cannot be left blank, please input a valid request.');
+  }
+  salesFigures.textContent = null;
+  createTableHeader();
+  generateTableData();
+  createTableFooter();
+
+
+};
+
+newLocationForm.addEventListener('submit', handleDataRequest);
