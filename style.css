@@ -6,10 +6,10 @@ General Styling
   /*outline: 2px dotted red;*/
 }
 
-body {
-
+.wrapper {
+  width: 960px;
+  margin: 0 auto;
 }
-
 
 /******************************
 Header Styling
@@ -17,21 +17,58 @@ Header Styling
 
 header {
   padding: 20px;
+  width: 40%;
+  min-width: 80%;
+  margin: 0 auto 20px;
 }
 
 h1 {
   width: 20%;
   text-align: center;
   margin: 0 auto;
+  padding: 5px;
 }
 
-h3 {
-  width: 20%;
+.pats_cookies_title {
+  margin: 0 auto;
+  width: 605px;
+
+}
+.pat {
+  font-family: 'Rock Salt', cursive;
+  font-size: 60px;
+  color: #ff471a;
+  display: inline;
+  width: 50%;
+  padding: 0 0 0 10%;
+}
+
+.salmon_cookies {
   text-align: center;
+  font-family: 'Abril Fatface', cursive;
+  display: inline;
+  width: 50%;
+  margin: 0 10% 0 10px;
+}
+
+.salmon_image {
+  width: 250px;
+  display: inline;
   margin: 0 auto;
 }
 
+a, p {
+  display: inline;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+}
 
+nav {
+  width: 500px;
+  margin: 0 auto;
+}
 /*****************************
 Form Styling
 ******************************/
@@ -56,4 +93,44 @@ tr {
 
 th {
   outline: 2px solid black;
+}
+
+/***************************
+Index Main Body Styling
+***************************/
+
+.locations {
+  margin: 0 auto;
+}
+section img {
+  max-width: 300px;
+  position: relative;
+  opacity: 0.75;
+}
+
+/*h3.1st_and_pike_header {
+  font-family: 'Lalezar', cursive;
+  color: white;
+  font-size: 55px;
+  position: absolute;
+  width: 100%;
+  top: 175px;
+  left: 175px;
+}
+
+h3.seatac_header {
+  font-family: 'Lalezar', cursive;
+  color: white;
+  font-size: 55px;
+  position: absolute;
+  width: 100%;
+  top: 175px;
+  left: 175px;
+}*/
+
+.location_description {
+  font-style: serif;
+  font-size: 20px;
+  float: right;
+  width: 50%;
 }

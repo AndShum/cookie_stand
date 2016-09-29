@@ -13,7 +13,6 @@ function StoreInfo(locationName, minCustomer, maxCustomer, avgSale){ //construct
   this.dailySales = 0;
   this.randCustPerHour = [];
   this.hourlySales = [];
-  this.hourlyTotals = [];
   this.calcCustPerHour = function randomCustNum(min, max){ //calulates random # of customer for each hour between the min & max numbers provided
     for(var i = 0; i < hours.length; i++){
       min = Math.ceil(this.minCustomer);
@@ -27,7 +26,6 @@ function StoreInfo(locationName, minCustomer, maxCustomer, avgSale){ //construct
       this.dailySales += this.hourlySales[i];
     }
   };
-
 
   this.calcCustPerHour();
   this.calcSales();
@@ -96,13 +94,30 @@ function createTableFooter(){
   var footerTotals = document.createElement('td');
   footerTotals.textContent = 'Totals';
   tableRow.appendChild(footerTotals);
-  for ( var i = 0; i < hours.length + 1; i++){
-    var hourlyTotals = document.createElement('td');
-    hourlyTotals.textContent = '';
-    tableRow.appendChild(hourlyTotals);
+  for ( var i = 0; i < hours.length; i++){
+    var cookiesThisHour = 0;
+    var hourlyTotals = [];
+
+    for ( var j = 0; j < allStores.length; j++){
+      cookiesThisHour += allStores[j].hourlySales[i];
+      hourlyTotals.push(cookiesThisHour);
+    }
+    var hourTotals = document.createElement('td');
+    hourTotals.textContent = cookiesThisHour;
+    tableRow.appendChild(hourTotals);
   }
+  var totalOfTotals = 0;
+
+  for ( i = 0; i < hours.length; i++){
+    totalOfTotals += hourlyTotals[i];
+    console.log(totalOfTotals);
+  }
+  var totalSalesOverall = document.createElement('td');
+  totalSalesOverall.textContent = totalOfTotals;
+  tableRow.appendChild(totalSalesOverall);
   salesTable.appendChild(tableRow);
 }
+
 createTableFooter();
 
 function handleDataRequest(event){
@@ -125,6 +140,7 @@ function handleDataRequest(event){
   createTableHeader();
   generateTableData();
   createTableFooter();
+
 
 };
 
