@@ -93,6 +93,7 @@ Index Main Body Styling
 
 .locations {
   margin: 0 auto;
+  width: 820px;
 }
 section img {
   max-width: 300px;
@@ -136,4 +137,10 @@ p.about_us, .the_beginning {
   top: 150px;
   right: 275px;
   box-shadow: 20px;
+}
+
+.location_info {
+  font-size: 14px;
+  text-align: center;
+  display: block;
 }
