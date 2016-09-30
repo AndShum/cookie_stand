@@ -124,7 +124,9 @@ p.about_us, .the_beginning {
   font-size: 15px;
 }
 
-
+.the_beginning {
+  display: inline;
+}
 .family_pic {
   width: 300px;
   float: right;
@@ -146,15 +148,14 @@ p.about_us, .the_beginning {
   width: 250px;
   position: relative;
   float: left;
+  margin: 10px;
 }
 
 .cookie {
   width: 200px;
   position: relative;
   float: left;
-  top: 150px;
-  right: 275px;
-  box-shadow: 20px;
+  margin: 20px;
 }
 
 .location_info {
