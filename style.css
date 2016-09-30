@@ -90,29 +90,40 @@ section img {
   opacity: 0.75;
 }
 
-/*h3.1st_and_pike_header {
-  font-family: 'Lalezar', cursive;
-  color: white;
-  font-size: 55px;
-  position: absolute;
-  width: 100%;
-  top: 175px;
-  left: 175px;
+p.about_us, .the_beginning {
+  font-style: sans-serif;
+  font-size: 15px;
 }
 
-h3.seatac_header {
-  font-family: 'Lalezar', cursive;
-  color: white;
-  font-size: 55px;
-  position: absolute;
-  width: 100%;
-  top: 175px;
-  left: 175px;
-}*/
+
+.family_pic {
+  width: 300px;
+  float: right;
+  margin: 0 5%;
+}
 
 .location_description {
   font-style: serif;
   font-size: 20px;
   float: right;
   width: 50%;
+}
+
+.info {
+  margin-bottom: 30px;
+}
+
+.cutter {
+  width: 250px;
+  position: relative;
+  float: left;
+}
+
+.cookie {
+  width: 200px;
+  position: relative;
+  float: left;
+  top: 150px;
+  right: 275px;
+  box-shadow: 20px;
 }
