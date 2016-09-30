@@ -108,7 +108,7 @@ function createTableFooter(){
   }
   var totalOfTotals = 0;
 
-  for ( i = 0; i < hours.length; i++){
+  for ( i = 0; i < hourlyTotals.length; i++){
     totalOfTotals += hourlyTotals[i];
     console.log(totalOfTotals);
   }
