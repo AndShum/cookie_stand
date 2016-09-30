@@ -2,36 +2,79 @@
 General Styling
 ******************************/
 
-* {
-  /*outline: 2px dotted red;*/
+.wrapper {
+  width: 960px;
+  margin: 0 auto;
 }
 
-body {
+h3 {
+  display: block;
+  width: 500px;
+  font-size: 50px;
+  font-family: 'Abril Fatface', cursive;
+  margin: 0 auto;
 
 }
 
-
+a:hover {
+  color: lightgrey;
+}
 /******************************
 Header Styling
 ******************************/
 
 header {
-  padding: 20px;
+
 }
 
-h1 {
-  width: 20%;
+.pats_cookies_title {
+
+}
+h1.pat {
+  font-family: 'Rock Salt', cursive;
+  font-size: 60px;
+  color: red;
+  display: inline;
+  margin-left: 50px;
+}
+
+h1.salmon_cookies {
+  font-family: 'Abril Fatface', cursive;
+  display: inline;
+  margin-right: 50px;
+}
+
+.salmon_image {
+  width: 300px;
+}
+
+h2 {
+  font-family: 'Lalezar', cursive;
+  font-size: 40px;
+  width: 400px;
   text-align: center;
+  margin: 50px auto;
+  border: 2px solid black;
+
+}
+
+a, p {
+  display: inline;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+nav {
+  display: inline;
+  width: 500px;
   margin: 0 auto;
 }
 
-h3 {
-  width: 20%;
-  text-align: center;
-  margin: 0 auto;
+.chinook_img {
+  width: 319px;
 }
-
-
 /*****************************
 Form Styling
 ******************************/
@@ -56,4 +99,81 @@ tr {
 
 th {
   outline: 2px solid black;
+}
+
+table {
+  margin-bottom: 50px;
+}
+
+/***************************
+Index Main Body Styling
+***************************/
+
+.locations {
+  margin: 0 auto;
+  width: 820px;
+}
+section img {
+  max-width: 300px;
+  position: relative;
+  opacity: 0.75;
+}
+
+p.about_us, .the_beginning {
+  font-style: sans-serif;
+  font-size: 15px;
+}
+
+
+.family_pic {
+  width: 300px;
+  float: right;
+  margin: 0 5%;
+}
+
+.location_description {
+  font-style: serif;
+  font-size: 18px;
+  float: right;
+  width: 50%;
+}
+
+.info {
+  margin-bottom: 30px;
+}
+
+.cutter {
+  width: 250px;
+  position: relative;
+  float: left;
+}
+
+.cookie {
+  width: 200px;
+  position: relative;
+  float: left;
+  top: 150px;
+  right: 275px;
+  box-shadow: 20px;
+}
+
+.location_info {
+  font-size: 14px;
+  text-align: center;
+  display: block;
+}
+
+.buy_button {
+  color: red;
+}
+
+/*************************
+Footer Styling
+*************************/
+
+footer {
+  width: 300px;
+  margin: 30px auto;
+  font-size: 16px;
+  text-align: center;
 }
