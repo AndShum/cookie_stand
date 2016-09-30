@@ -2,15 +2,23 @@
 General Styling
 ******************************/
 
-* {
-  /*outline: 2px dotted red;*/
-}
-
 .wrapper {
   width: 960px;
   margin: 0 auto;
 }
 
+h3 {
+  display: block;
+  width: 500px;
+  font-size: 50px;
+  font-family: 'Abril Fatface', cursive;
+  margin: 0 auto;
+
+}
+
+a:hover {
+  color: lightgrey;
+}
 /******************************
 Header Styling
 ******************************/
@@ -27,21 +35,23 @@ h1.pat {
   font-size: 60px;
   color: red;
   display: inline;
+  margin-left: 50px;
 }
 
 h1.salmon_cookies {
   font-family: 'Abril Fatface', cursive;
   display: inline;
+  margin-right: 50px;
 }
 
 .salmon_image {
   width: 300px;
 }
 
-.locations_header {
+h2 {
   font-family: 'Lalezar', cursive;
   font-size: 40px;
-  width: 300px;
+  width: 400px;
   text-align: center;
   margin: 50px auto;
   border: 2px solid black;
@@ -60,6 +70,10 @@ nav {
   display: inline;
   width: 500px;
   margin: 0 auto;
+}
+
+.chinook_img {
+  width: 319px;
 }
 /*****************************
 Form Styling
@@ -85,6 +99,10 @@ tr {
 
 th {
   outline: 2px solid black;
+}
+
+table {
+  margin-bottom: 50px;
 }
 
 /***************************
@@ -143,4 +161,19 @@ p.about_us, .the_beginning {
   font-size: 14px;
   text-align: center;
   display: block;
+}
+
+.buy_button {
+  color: red;
+}
+
+/*************************
+Footer Styling
+*************************/
+
+footer {
+  width: 300px;
+  margin: 30px auto;
+  font-size: 16px;
+  text-align: center;
 }
