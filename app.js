@@ -48,7 +48,6 @@ function StoreInfo(locationName, minCustomer, maxCustomer, avgSale){ //construct
     salesTable.appendChild(tableRow); //appends the now completed table row to the table element in sales.html
   };
 }
-
 //instances
 new StoreInfo('First and Pike Location', 23, 65, 6.3);
 new StoreInfo('SeaTac Airport Location', 3, 24, 1.2);
